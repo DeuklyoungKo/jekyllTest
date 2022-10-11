@@ -69,6 +69,11 @@ defaults:
       layout: "author"
   - scope:
       path: ""
+      type: "notices"
+    values:
+      layout: "notice"      
+  - scope:
+      path: ""
       type: "posts"
     values:
       layout: "post"
