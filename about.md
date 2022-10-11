@@ -16,7 +16,6 @@ This page tells you a little bit about me.
 <br>
 -------------------<br>
 {% post_url 2018-08-20-bananas %}<br>
-{{ '2018-08-20-bananas' | relative_url }}
 <br>
 <br>
  {{site.baseurl}}<br>
