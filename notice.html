@@ -19,7 +19,7 @@ layout: default
   {% endif %}
 
     <li>
-      <span class="notice-date">{{ notice.date | date_to_string }} &raquo;</span>
+      <span class="notice-date">{{ notice.date | date: "%Y-%m-%d" }} &raquo;</span>
       <a href="{{ notice.url }}">{{ notice.title }}</a>
       <p>{{ notice.excerpt}}</p>
     </li>
