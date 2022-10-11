@@ -20,4 +20,3 @@ This page tells you a little bit about me.
 <br>
  {{site.baseurl}}<br>
  {{site.relative_url}}<br>
- [{{|site.relative_url}}]
