@@ -59,7 +59,8 @@ collections:
   authors:
     output: true
   notices:
-    output: true    
+    output: true
+    permalink: /notices/:categories/:year/:month/:day/:title:output_ext
 
 defaults:
   - scope:

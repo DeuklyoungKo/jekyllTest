@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+
+
+{% for notice in site.notices reversed  %}
+  {% capture this_year %}{{ notice.date | date: "%Y" }}{% endcapture %}
+
+  {% if forloop.first %}
+  <h2 id="{{ this_year }}-ref">{{this_year}}</h2>
+  <ul class="notices">
+  {% else %}
+      {% if this_year != last_year %}
+      </ul>
+      <h2 id="{{ this_year }}-ref">{{this_year}}</h2>
+      <ul class="notices">
+      {% endif %}
+  {% endif %}
+
+    <li>
+      <span class="notice-date">{{ notice.date | date_to_string }} &raquo;</span>
+      <a href="{{ notice.url }}">{{ notice.title }}</a>
+      <p>{{ notice.excerpt}}</p>
+    </li>
+
+  {% if forloop.last %}
+    </ul>
+  {% endif %}
+
+  {% capture last_year %}{{ this_year }}{% endcapture %}
+{% endfor %}
+<!-- 
+
+<ul>
+  {% for notice in site.notices %}
+    <li>
+      <h2><a href="{{ notice.url  | absolute_url}}">{{ notice.title }}</a></h2>
+      <p>{{ notice.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul> -->
