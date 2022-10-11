@@ -1,0 +1,23 @@
+---
+title: My page
+my_variable: footer_company_a.html
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <br>
+    <p>{{ page.title }}</p>
+    {% if page.show_sidebar %}
+    <div class="sidebar">
+        sidebar content
+    </div>
+    {% endif %}
+    <br>
+    {% link {{ page.my_variable }} %}
+  </body>
+</html>
